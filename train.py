@@ -1,6 +1,6 @@
 import lightly_train
 
-NAME = "rect_convnext-small(new_6.3)"
+NAME = "rect_convnext-small(moose_elk_6.19)"
 
 def main():
     lightly_train.train_object_detection(
@@ -13,10 +13,10 @@ def main():
         overwrite=True,
         data={
             "format": "yolo",
-            "path": "/home/higo522/RMNP/new_dataset(6.3)",
+            "path": "/home/higo522/RMNP/moose_elk_6.19",
             "train": "train/images",
             "val": "val/images",
-            "names": {0: "moose"},
+            "names": {0: "moose", 1: "elk"},
         },
         logger_args={
             "wandb": {
